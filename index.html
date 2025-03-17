@@ -55,7 +55,7 @@
     const AS_URL_BASE = "https://script.google.com/macros/s/AKfycbwNMHQKwHKVrKmoVE5Pof-eD-XzzcqB6BZS7-aSMjwIU6y-sWEzB4KAPc7CKKhhTVcr9g/exec";
                          
     var url = document.location.href;
-    var k = url.substr(url.last.IndexOf("k=")+2);
+    var k = url.substr(url.lastIndexOf("k=")+2);
 
     if(k){
       fetch(AS_URL_BASE+'?k='+k)
