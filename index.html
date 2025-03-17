@@ -55,19 +55,19 @@
 </head>
 <body>
   <scrip>
-    const AS_URL_BASE = "https://script.google.com/macros/s/AKfycbwNMHQKwHKVrKmoVE5Pof-eD-XzzcqB6BZS7-aSMjwIU6y-sWEzB4KAPc7CKKhhTVcr9g/exec" //La dirección base de nuestro servicio web
+    const AS_URL_BASE = "https://script.google.com/macros/s/AKfycbwNMHQKwHKVrKmoVE5Pof-eD-XzzcqB6BZS7-aSMjwIU6y-sWEzB4KAPc7CKKhhTVcr9g/exec";
    
-    var url = document.location.href; //Obtenemos la url
-    var k = url.substr(url.last.IndexOf("k=")+2; //buscamos el último valor del parámetro k
+    var url = document.location.href;
+    var k = url.substr(url.last.IndexOf("k=")+2;
 
     if(k){
-      fetch(AS_URL_BASE+'?k='+k)  //se obtiene el valor de la url del web service añadiendole la clave recibida por el parámetro k
-      .then(r => r.text())  // se va a buscar ese valor a la hoja excel en la columna target
+      fetch(AS_URL_BASE+'?k='+k)
+      .then(r => r.text())
       .then((r) => {
         console.log(r);
         //document.write(r);
         if(r){
-          document.location.replace(r); //redirección a la url recibida
+          document.location.replace(r);
           }
         })
       .catch(err => console.log(err))
@@ -76,7 +76,7 @@
     
   </scrip>
   
-  <div class="lds-ring"><div></div><div></div><div></div><div></div></div>  //  div para el icono 
+  <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
   
 </body>
 </html>
